@@ -54,13 +54,13 @@ class PasswordManager:
         with open(self.data_file, "w") as file:
             json.dump(data, file)
 
-# Example usage:
+
 password_manager = PasswordManager()
 
-# Save a password
+
 password_manager.save_password("Take password", "Comic", "1234567890")
 
-# Get a password
+
 retrieved_password = password_manager.get_password("Take Password")
 if retrieved_password:
     print("Retrieved Password:", retrieved_password)

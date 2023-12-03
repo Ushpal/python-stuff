@@ -37,6 +37,13 @@ if answer=="Read Only Memory":
 else:
     print("Incorrect!")
 
+answer= input("what does DOM means?\n")
+if answer=="Data Object Module":
+    print("correct")
+    score += 1
+else:
+    print("Incorrect!")
+
 print("You got " + str(score)+ " questions correct!")
 print("You got " + str((score/4)*100) + "%.")
 

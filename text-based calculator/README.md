@@ -6,8 +6,7 @@ This mini-project demonstrates the use of a stack to evaluate a mathematical exp
 
 Stack Class:
 
-class Stack:
-
+    class Stack: 
     def __init__(self):
         self.items = []
         
@@ -71,17 +70,18 @@ If the character is neither a digit nor a valid parenthesis, it raises a ValueEr
 After processing the entire expression, it calculates the final result by summing up the values remaining on the stack.
 
 
-main Function:
 
-def main():
+
+    mdef main():
     expression = input("Enter a mathematical expression with parentheses: ")
     try:
         result = evaluate_expression(expression)
         print(f"Result of the expression: {result}")
     except ValueError as e:
         print(f"Error: {e}")
-if __name__ == "__main__":
+    if __name__ == "__main__":
     main()
+
     
 The main function takes user input for a mathematical expression.
 It then attempts to evaluate the expression using the evaluate_expression function.

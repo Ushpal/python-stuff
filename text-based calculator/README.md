@@ -6,7 +6,6 @@ This mini-project demonstrates the use of a stack to evaluate a mathematical exp
 
 Stack Class:
 
-
 class Stack:
 
     def __init__(self):
@@ -36,9 +35,11 @@ The pop method removes and returns the item from the top of the stack.
 The peek method returns the item from the top of the stack without removing it.
 The is_empty method checks if the stack is empty.
 
-evaluate_expression Function:
 
-def evaluate_expression(expression):
+
+
+    evaluate_expression Function:
+    def evaluate_expression(expression):
     stack = Stack()
     
     for char in expression:

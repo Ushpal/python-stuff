@@ -6,18 +6,24 @@ This mini-project demonstrates the use of a stack to evaluate a mathematical exp
 
 Stack Class:
 
+
 class Stack:
+
     def __init__(self):
         self.items = []
+        
     def is_empty(self):
         return len(self.items) == 0
+        
     def push(self, item):
         self.items.append(item)
+        
     def pop(self):
         if not self.is_empty():
             return self.items.pop()
         else:
             raise IndexError("pop from an empty stack")
+            
     def peek(self):
         if not self.is_empty():
             return self.items[-1]
@@ -34,6 +40,7 @@ evaluate_expression Function:
 
 def evaluate_expression(expression):
     stack = Stack()
+    
     for char in expression:
         if char.isdigit():
             stack.push(int(char))
@@ -47,10 +54,12 @@ def evaluate_expression(expression):
             stack.push(result)
         else:
             raise ValueError("Invalid expression")
+            
     final_result = 0
     while not stack.is_empty():
         final_result += stack.pop()
     return final_result
+    
 The evaluate_expression function takes a mathematical expression as input.
 It uses a stack to evaluate the expression by considering the parentheses.
 It iterates through each character in the expression.

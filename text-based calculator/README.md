@@ -9,24 +9,21 @@ Stack Class:
 class Stack:
     def __init__(self):
         self.items = []
-
     def is_empty(self):
         return len(self.items) == 0
-
     def push(self, item):
         self.items.append(item)
-
     def pop(self):
         if not self.is_empty():
             return self.items.pop()
         else:
             raise IndexError("pop from an empty stack")
-
     def peek(self):
         if not self.is_empty():
             return self.items[-1]
         else:
             raise IndexError("peek from an empty stack")
+            
 The Stack class defines a basic stack data structure with three main methods: push, pop, and peek.
 The push method adds an item to the top of the stack.
 The pop method removes and returns the item from the top of the stack.
@@ -37,7 +34,6 @@ evaluate_expression Function:
 
 def evaluate_expression(expression):
     stack = Stack()
-
     for char in expression:
         if char.isdigit():
             stack.push(int(char))
@@ -51,11 +47,9 @@ def evaluate_expression(expression):
             stack.push(result)
         else:
             raise ValueError("Invalid expression")
-
     final_result = 0
     while not stack.is_empty():
         final_result += stack.pop()
-
     return final_result
 The evaluate_expression function takes a mathematical expression as input.
 It uses a stack to evaluate the expression by considering the parentheses.
@@ -71,15 +65,14 @@ main Function:
 
 def main():
     expression = input("Enter a mathematical expression with parentheses: ")
-    
     try:
         result = evaluate_expression(expression)
         print(f"Result of the expression: {result}")
     except ValueError as e:
         print(f"Error: {e}")
-
 if __name__ == "__main__":
     main()
+    
 The main function takes user input for a mathematical expression.
 It then attempts to evaluate the expression using the evaluate_expression function.
 If successful, it prints the result; otherwise, it catches and prints any ValueError raised during the evaluation.

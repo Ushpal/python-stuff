@@ -3,7 +3,8 @@
 
 <h2>
 <b>For output::</b>
-<l>python main.py -v "[YouTube Video URL]"   (for video</l>)
+
+<l>python main.py -v "[YouTube Video URL]"   (for video)</l>
 <l>python main.py -a -v "[YouTube Video URL]"   (for audio)</l>
 </h2>
 <br>

@@ -1,11 +1,13 @@
 -First run command :: pip install -r requirements.txt
 
-For output
+
+
+For output::
 -python main.py -v "[YouTube Video URL]"   (for video)
 -python main.py -a -v "[YouTube Video URL]"   (for audio)
 
 
-
+**
 To download age-restricted videos, you need to provide Pytube with YouTube API credentials, including an API key and OAuth client ID.
 This allows Pytube to authenticate and access age-restricted content.
 
@@ -23,4 +25,5 @@ Here's a general guide on how to use Pytube with API credentials:
 3.Provide API Key and OAuth Client ID:
   -You need to set your API key and OAuth client ID in your Pytube script. Update the script with the obtained credentials.
 
-**Remember to keep your credentials secure, and do not share them publicly.**
+**Remember to keep your credentials secure, and do not share them publicly.** 
+**
